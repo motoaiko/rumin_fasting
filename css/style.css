@@ -309,8 +309,8 @@ table {
   --c-white: #FFFFFF;
   --c-line: #06C755;
   --c-line-d: #05A848;
-  --f-serif: "Noto Serif JP", "Yu Mincho", serif;
-  --f-round: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif;
+  --f-serif: 'Noto Serif JP', 'Yu Mincho', serif;
+  --f-round: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;
   --r-xs: 6px;
   --r-sm: 12px;
   --r-md: 20px;
@@ -348,7 +348,7 @@ body {
 }
 
 /* =============================================
-  Utilities
+Utilities
 ============================================= */
 .wrap {
   max-width: var(--w);
@@ -390,8 +390,7 @@ body {
   font-family: var(--f-serif);
   font-size: clamp(23px, 5vw, 36px);
   font-weight: 400;
-  line-height: 1.6;
-  color: var(--c-text);
+  margin-bottom: 60px;
 }
 
 .sec-ttl em {
@@ -406,18 +405,8 @@ body {
   margin-top: 18px;
 }
 
-/* Leaf deco */
-.deco-leaf {
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--c-apricot), transparent);
-  border-radius: var(--r-full);
-  margin: 18px auto;
-}
-
 /* =============================================
-  Buttons
+Buttons
 ============================================= */
 .btn {
   display: inline-flex;
@@ -580,7 +569,7 @@ Banner in header
 }
 
 /* =============================================
-  HERO
+HERO
 ============================================= */
 .main {
   margin-top: 180px;
@@ -684,7 +673,7 @@ Banner in header
 }
 
 /* =============================================
-   EMPATHY
+EMPATHY
 ============================================= */
 .empathy-grid {
   display: grid;
@@ -760,7 +749,7 @@ Banner in header
 }
 
 /* =============================================
-   RESULTS
+RESULTS
 ============================================= */
 .results-sec {
   background: linear-gradient(150deg, #3d3530 0%, #6b4f3a 100%);
@@ -908,7 +897,7 @@ Banner in header
 }
 
 /* =============================================
-   SOLUTION
+SOLUTION
 ============================================= */
 .solution-intro {
   max-width: 620px;
@@ -1008,7 +997,7 @@ Banner in header
 }
 
 /* =============================================
-   STRENGTHS
+STRENGTHS
 ============================================= */
 .strengths-layout {
   display: grid;
@@ -1080,7 +1069,7 @@ Banner in header
 }
 
 /* =============================================
-   STORY
+STORY
 ============================================= */
 .story-layout {
   display: grid;
@@ -1204,7 +1193,7 @@ Banner in header
 }
 
 /* =============================================
-   MENU
+MENU
 ============================================= */
 .menu-grid {
   display: grid;
@@ -1381,7 +1370,7 @@ Banner in header
 }
 
 /* =============================================
-   DISCLAIMER
+DISCLAIMER
 ============================================= */
 .disc-list {
   max-width: 680px;
@@ -1449,7 +1438,7 @@ details[open] > summary::after {
 }
 
 /* =============================================
-   FOOTER
+FOOTER
 ============================================= */
 .g-footer {
   background: var(--c-text);
@@ -1536,7 +1525,7 @@ details[open] > summary::after {
 }
 
 /* =============================================
-   Sticky LINE FAB
+Sticky LINE FAB
 ============================================= */
 .fab-line {
   position: fixed;
@@ -1577,7 +1566,7 @@ details[open] > summary::after {
 }
 
 /* =============================================
-   Fade-in
+Fade-in
 ============================================= */
 .fi {
   opacity: 0;
@@ -1600,5 +1589,4 @@ details[open] > summary::after {
 
 .fi-d3 {
   transition-delay: 0.3s;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

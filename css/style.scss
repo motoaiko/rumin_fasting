@@ -10,13 +10,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 
-  @include mobile {
-    font-size: 14px;
-  }
+@include mobile {
+	font-size: 14px;
+}
 }
 
 /* =============================================
-  Utilities
+Utilities
 ============================================= */
 .wrap {
 	max-width: var(--w);
@@ -50,12 +50,12 @@ body {
 	margin-bottom: 14px;
 }
 .sec-ttl {
-	font-family: var(--f-serif);
-	font-size: clamp(23px, 5vw, 36px);
-	font-weight: 400;
-	line-height: 1.6;
-	color: var(--c-text);
+    font-family: var(--f-serif);
+    font-size: clamp(23px, 5vw, 36px);
+    font-weight: 400;
+    margin-bottom: 60px;
 }
+
 .sec-ttl em {
 	font-style: normal;
 	color: var(--c-apricot-d);
@@ -67,31 +67,22 @@ body {
 	margin-top: 18px;
 }
 
-/* Leaf deco */
-.deco-leaf {
-	display: block;
-	width: 40px;
-	height: 2px;
-	background: linear-gradient(90deg, var(--c-apricot), transparent);
-	border-radius: var(--r-full);
-	margin: 18px auto;
-}
 
 /* =============================================
-  Buttons
+Buttons
 ============================================= */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: var(--r-full);
-  cursor: pointer;
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
-  padding: 12px 32px;
-  white-space: nowrap;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+font-size: 14px;
+font-weight: 500;
+border-radius: var(--r-full);
+cursor: pointer;
+transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
+padding: 12px 32px;
+white-space: nowrap;
 }
 .btn:hover {
 	transform: translateY(-2px);
@@ -167,10 +158,10 @@ Header
 		font-weight: 400;
 		letter-spacing: 0.06em;
 
-    @include mobile {
-      font-size: 20px;
-      line-height: 1.6;
-    }
+	@include mobile {
+	font-size: 20px;
+	line-height: 1.6;
+	}
 
 		span {
 			color: var(--c-apricot-d);
@@ -181,9 +172,9 @@ Header
 		padding: 10px 20px;
 		font-size: 16px;
 
-    @include mobile {
-      padding: 8px 16px;
-    }
+	@include mobile {
+	padding: 8px 16px;
+	}
 	}
 }
 
@@ -198,9 +189,9 @@ Banner in header
 	position: relative;
 	overflow: hidden;
 
-  @include mobile {
-    padding: 10px 8px;
-  }
+@include mobile {
+	padding: 10px 8px;
+}
 
 	&::before {
 		content: '';
@@ -223,9 +214,9 @@ Banner in header
 		justify-content: center;
 		gap: 8px;
 
-    @include mobile {
-      gap: 0;
-    }
+	@include mobile {
+	gap: 0;
+	}
 	}
 
 	&__link {
@@ -242,12 +233,12 @@ Banner in header
 		font-weight: 700;
 		padding: 2px 10px;
 		border-radius: var(--r-full);
-    margin-right: 8px;
+	margin-right: 8px;
 	}
 }
 
 /* =============================================
-  HERO
+HERO
 ============================================= */
 .main {
 	margin-top: 180px;
@@ -273,21 +264,21 @@ Banner in header
 		justify-content: center;
 
 		@include mobile {
-      padding: 64px 6px 48px;
-      margin: 0 auto;
-      text-align: center;
+	padding: 64px 6px 48px;
+	margin: 0 auto;
+	text-align: center;
 		}
 	}
 
 	&__sub-title {
 	font-family: var(--f-round); 
-    font-size: 16px;
-    letter-spacing: 0.2em;
-    color: var(--c-apricot-d);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+	font-size: 16px;
+	letter-spacing: 0.2em;
+	color: var(--c-apricot-d);
+	margin-bottom: 16px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 
 		@include mobile {
 			justify-content: center;
@@ -302,11 +293,11 @@ Banner in header
 	}
 
 	&__title {
-    font-family: var(--f-serif);
-    font-size: clamp(32px, 5.5vw, 56px);
-    font-weight: 300;
-    line-height: 1.5;
-    margin-bottom: 32px;
+	font-family: var(--f-serif);
+	font-size: clamp(32px, 5.5vw, 56px);
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 32px;
 
 
 	}
@@ -317,6 +308,7 @@ Banner in header
 		color: var(--c-text-mid);
 		margin-bottom: 40px;
 		line-height: 1.9;
+		
 
 		mark {
 			background: none;
@@ -359,7 +351,7 @@ Banner in header
 }
 
 /* =============================================
-   EMPATHY
+EMPATHY
 ============================================= */
 .empathy-grid {
 	display: grid;
@@ -431,7 +423,7 @@ Banner in header
 }
 
 /* =============================================
-   RESULTS
+RESULTS
 ============================================= */
 .results-sec {
 	background: linear-gradient(150deg, #3d3530 0%, #6b4f3a 100%);
@@ -566,7 +558,7 @@ Banner in header
 }
 
 /* =============================================
-   SOLUTION
+SOLUTION
 ============================================= */
 .solution-intro {
 	max-width: 620px;
@@ -658,7 +650,7 @@ Banner in header
 }
 
 /* =============================================
-   STRENGTHS
+STRENGTHS
 ============================================= */
 .strengths-layout {
 	display: grid;
@@ -724,7 +716,7 @@ Banner in header
 }
 
 /* =============================================
-   STORY
+STORY
 ============================================= */
 .story-layout {
 	display: grid;
@@ -835,7 +827,7 @@ Banner in header
 }
 
 /* =============================================
-   MENU
+MENU
 ============================================= */
 .menu-grid {
 	display: grid;
@@ -1001,7 +993,7 @@ Banner in header
 }
 
 /* =============================================
-   DISCLAIMER
+DISCLAIMER
 ============================================= */
 .disc-list {
 	max-width: 680px;
@@ -1057,7 +1049,7 @@ details[open] > summary::after {
 }
 
 /* =============================================
-   FOOTER
+FOOTER
 ============================================= */
 .g-footer {
 	background: var(--c-text);
@@ -1136,7 +1128,7 @@ details[open] > summary::after {
 }
 
 /* =============================================
-   Sticky LINE FAB
+Sticky LINE FAB
 ============================================= */
 .fab-line {
 	position: fixed;
@@ -1176,7 +1168,7 @@ details[open] > summary::after {
 }
 
 /* =============================================
-   Fade-in
+Fade-in
 ============================================= */
 .fi {
 	opacity: 0;
