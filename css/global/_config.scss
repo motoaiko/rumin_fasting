@@ -1,0 +1,64 @@
+/* =========================
+  CSS変数
+   ========================= */
+:root {
+  --c-base:        #FAF9F7;
+  --c-base-warm:   #F5F0EB;
+  --c-base-pink:   #FAF3F2;
+  --c-milk-beige:  #D2C4B1;
+  --c-milk-pink:   #F1E3E2;
+  --c-milk-pink-d: #E2C8C6;
+  --c-apricot:     #E6C7AC;
+  --c-apricot-d:   #C9A07E;
+  --c-text:        #3D3530;
+  --c-text-mid:    #7A6E69;
+  --c-text-light:  #B0A49E;
+  --c-white:       #FFFFFF;
+  --c-line:        #06C755;
+  --c-line-d:      #05A848;
+
+  --f-serif:  'Noto Serif JP', 'Yu Mincho', serif;
+  --f-round:  'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+
+  --r-xs:   6px;
+  --r-sm:   12px;
+  --r-md:   20px;
+  --r-lg:   32px;
+  --r-xl:   48px;
+  --r-full: 9999px;
+
+  --sh-card:   0 4px 32px rgba(61,53,48,.07);
+  --sh-float:  0 8px 48px rgba(61,53,48,.11);
+  --sh-btn:    0 4px 18px rgba(230,199,172,.45);
+  --sh-line:   0 4px 18px rgba(6,199,85,.30);
+
+  --ease: cubic-bezier(.4,0,.2,1);
+  --dur:  .32s;
+  --w:    960px;
+}
+
+/* =========================
+   レスポンシブ
+   ========================= */
+
+/* スマホ */
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+/* タブレット※スマホを含む */
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+/* PC */
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
