@@ -308,7 +308,7 @@ HERO
 		color: var(--c-text-mid);
 		margin-bottom: 40px;
 		line-height: 1.9;
-		
+
 
 		mark {
 			background: none;
@@ -405,6 +405,25 @@ EMPATHY
 	font-size: 20px;
 	flex-shrink: 0;
 	margin-top: 1px;
+}
+.fi-icon {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--c-apricot) 0%, var(--c-apricot-d) 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	margin-top: 2px;
+}
+.fi-icon svg {
+	width: 10px;
+	height: 10px;
+}
+
+.pain-icon {
+	margin-top: 4px;
 }
 
 .empathy-msg {
@@ -921,21 +940,6 @@ MENU
 	align-items: flex-start;
 	font-size: 14px;
 	line-height: 1.65;
-}
-.fi-icon {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: linear-gradient(135deg, var(--c-apricot) 0%, var(--c-apricot-d) 100%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	margin-top: 2px;
-}
-.fi-icon svg {
-	width: 10px;
-	height: 10px;
 }
 
 .btn-base {

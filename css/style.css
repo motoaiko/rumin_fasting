@@ -732,6 +732,27 @@ EMPATHY
   margin-top: 1px;
 }
 
+.fi-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--c-apricot) 0%, var(--c-apricot-d) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.fi-icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+.pain-icon {
+  margin-top: 4px;
+}
+
 .empathy-msg {
   margin-top: 8px;
   background: linear-gradient(135deg, rgba(241, 227, 226, 0.5), rgba(230, 199, 172, 0.2));
@@ -1296,23 +1317,6 @@ MENU
   align-items: flex-start;
   font-size: 14px;
   line-height: 1.65;
-}
-
-.fi-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--c-apricot) 0%, var(--c-apricot-d) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.fi-icon svg {
-  width: 10px;
-  height: 10px;
 }
 
 .btn-base {
