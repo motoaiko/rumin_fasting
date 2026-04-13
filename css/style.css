@@ -309,8 +309,8 @@ table {
   --c-white: #FFFFFF;
   --c-line: #06C755;
   --c-line-d: #05A848;
-  --f-serif: 'Noto Serif JP', 'Yu Mincho', serif;
-  --f-round: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+  --f-serif: "Noto Serif JP", "Yu Mincho", serif;
+  --f-round: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif;
   --r-xs: 6px;
   --r-sm: 12px;
   --r-md: 20px;
@@ -506,6 +506,7 @@ Header
 .header__logo {
   font-family: var(--f-serif);
   font-size: 24px;
+  font-weight: 400;
   letter-spacing: 0.06em;
 }
 @media (max-width: 768px) {
@@ -1599,4 +1600,5 @@ details[open] > summary::after {
 
 .fi-d3 {
   transition-delay: 0.3s;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
