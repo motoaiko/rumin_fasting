@@ -56,9 +56,9 @@
 		<header class="header" role="banner" id="site-header">
 			<div class="header__inner">
 				<!-- Logo -->
-				<a href="#" class="header__logo" aria-label="Lovemyselfトップへ"
-					>Love<span>myself</span>
-				</a>
+				<h1><a href="#" class="header__logo" aria-label="Lovemyselfトップへ">
+				Love<span>myself</span>
+				</a></h1>
 				<a
 					href="https://lin.ee/placeholder"
 					class="btn btn--line header__cta"
@@ -90,14 +90,15 @@
 		</header>
 
 		<main id="main" class="main" role="main">
+
         <!-- FV-->
-			<section class="hero" aria-labelledby="hero-h1">
+			<section class="hero" aria-labelledby="hero">
 				<div class="hero__layout">
 					<div class="hero__content">
 						<p class="hero__sub-title">分子栄養学に基づく食欲コントロール</p>
-						<h1 class="hero__title" id="hero-h1">
+						<div class="hero__title" id="hero-h1">
 							最高に心地いい毎日は、<br>自分がつくる。
-							</h1>
+							</div>
 						<p class="hero__lead">
 							頑張るダイエットは、もう<mark>終わり</mark>。<br />
 							しっかり食べながら、食欲を整える。
@@ -148,13 +149,15 @@
 			</section>
 
 		<!-- EMPATHY-->
-			<section class="sec sec--pink" id="empathy" aria-labelledby="empathy-ttl">
-				<div class="wrap">
-					<div class="empathy-grid">
+
+		
+			<section class="empathy section--pink" id="empathy" aria-labelledby="empathy-ttl">
+				<div class="empathy__wrap">
+					<div class="empathy__grid">
 						<!-- Lifestyle image -->
-						<div class="empathy-img-wrap fi">
+						<div class="empathy__image-wrapper fi">
 							<img
-								src="https://placehold.jp/F1E3E2/8B6F6A/600x750.png?text=窓辺でくつろぐ女性%0Aライフスタイル画像"
+								src="https://placehold.jp/F1E3E2/8B6F6A/600x750.png"
 								alt="窓辺でホッとしている女性のライフスタイル画像。柔らかな自然光が差し込む穏やかなシーン"
 								width="600"
 								height="750"
@@ -164,53 +167,55 @@
 
 						<div>
 							<div class="fi">
-								<span class="sec-label">こんなお悩みはありませんか？</span>
-								<h2 class="sec-ttl" id="empathy-ttl">
+								<span class="empathy__label">こんなお悩みはありませんか？</span>
+								<h2 class="empathy__title" id="empathy-ttl">
 									食欲が止まらないのは<br /><em>意思が弱いからじゃない</em>
 								</h2>
 							</div>
-							<ul class="pain-list" role="list">
-								<li class="pain-item fi fi-d1" role="listitem">
-									<span class="fi-icon pain-icon" aria-hidden="true"
+							<ul class="empathy__pain-list" role="list">
+								<li class="empathy__pain-item fi fi-d1" role="listitem">
+									<span class="empathy__pain-item-icon fi-icon" aria-hidden="true"
 									><svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="2.5">
 										<polyline points="1,5 4,8 9,2" /></svg></span>
 									<span>お腹は空いていないのに、夜になると食べてしまう</span>
 								</li>
-								<li class="pain-item fi fi-d1" role="listitem">
-									<span class="fi-icon pain-icon" aria-hidden="true"
+								<li class="empathy__pain-item fi fi-d1" role="listitem">
+									<span class="empathy__pain-item-icon fi-icon" aria-hidden="true"
 									><svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="2.5">
 										<polyline points="1,5 4,8 9,2" /></svg></span>
 									<span>甘いもの・炭水化物への衝動がどうしても抑えられない</span>
 								</li>
-								<li class="pain-item fi fi-d2" role="listitem">
-									<span class="fi-icon pain-icon" aria-hidden="true"
+								<li class="empathy__pain-item fi fi-d2" role="listitem">
+									<span class="empathy__pain-item-icon fi-icon" aria-hidden="true"
 									><svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="2.5">
 										<polyline points="1,5 4,8 9,2" /></svg></span>
 									<span>PMSの時期になると食欲が爆発して、自己嫌悪になる</span>
 								</li>
-								<li class="pain-item fi fi-d2" role="listitem">
-									<span class="fi-icon pain-icon" aria-hidden="true"
+								<li class="empathy__pain-item fi fi-d2" role="listitem">
+									<span class="empathy__pain-item-icon fi-icon" aria-hidden="true"
 									><svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="2.5">
 										<polyline points="1,5 4,8 9,2" /></svg></span>
 									<span>頑張って制限しても、リバウンドを繰り返してしまう</span>
 								</li>
-								<li class="pain-item fi fi-d3" role="listitem">
-									<span class="fi-icon pain-icon" aria-hidden="true"
+								<li class="empathy__pain-item fi fi-d3" role="listitem">
+									<span class="empathy__pain-item-icon fi-icon" aria-hidden="true"
 									><svg viewBox="0 0 10 10" fill="none" stroke="white" stroke-width="2.5">
 										<polyline points="1,5 4,8 9,2" /></svg></span>
 									<span>肌荒れ・疲れやすさが続き、自分の外見に自信が持てない</span>
 								</li>
 							</ul>
-							<div class="empathy-msg fi fi-d2">
+							<div class="empathy__message fi fi-d2">
 								それは<strong>「栄養の問題」</strong>です。<br />
-								意思でも根性でもなく、<br />
-								体が足りない栄養を食欲で訴えているサイン。<br />
+								意思でも根性でもなく、<br>
+								体が足りない栄養を<br>
+								食欲で訴えているサイン。<br>
 								<strong>あなたは何も悪くない。</strong>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
 
 		<!-- RESULTS-->
 			<section class="results-sec sec" id="results" aria-labelledby="results-ttl">
@@ -308,7 +313,7 @@
 					<!-- Food image -->
 					<div class="solution-food-img fi">
 						<img
-							src="https://placehold.jp/D2C4B1/ffffff/1200x420.png?text=色とりどりの野菜・果物%0A健康的な食事のイメージ"
+							src="https://placehold.jp/D2C4B1/ffffff/1200x420.png"
 							alt="色とりどりの野菜や果物、健康的な食事のイメージ画像。分子栄養学に基づく豊かな食卓"
 							width="1200"
 							height="420"
@@ -359,7 +364,7 @@
 					<div class="yoga-img-wrap">
 						<div class="yoga-img-card fi">
 							<img
-								src="https://placehold.jp/E6C7AC/ffffff/400x533.png?text=ヨガ・ストレッチ%0Aイメージ①"
+								src="https://placehold.jp/E6C7AC/ffffff/400x533.png"
 								alt="柔らかな光の中でヨガをする女性。心身のバランスを整えるライフスタイルのイメージ"
 								width="400"
 								height="533"
@@ -368,7 +373,7 @@
 						</div>
 						<div class="yoga-img-card fi fi-d1">
 							<img
-								src="https://placehold.jp/F1E3E2/8B6F6A/400x533.png?text=ストレッチ%0Aイメージ②"
+								src="https://placehold.jp/F1E3E2/8B6F6A/400x533.png"
 								alt="朝の光の中でストレッチをする女性。自愛のルーティンとして体を動かすシーン"
 								width="400"
 								height="533"
@@ -377,7 +382,7 @@
 						</div>
 						<div class="yoga-img-card fi fi-d2">
 							<img
-								src="https://placehold.jp/D2C4B1/ffffff/400x533.png?text=ウェルネス%0Aイメージ③"
+								src="https://placehold.jp/D2C4B1/ffffff/400x533.png"
 								alt="自然光の中でリラックスする女性のウェルネスイメージ"
 								width="400"
 								height="533"
@@ -411,7 +416,7 @@
 						<!-- Botanical image -->
 						<div class="strengths-img fi">
 							<img
-								src="https://placehold.jp/D2C4B1/ffffff/600x750.png?text=観葉植物（モンステラ・ウンベラータ）%0A癒やしのインテリアイメージ"
+								src="https://placehold.jp/D2C4B1/ffffff/600x750.png"
 								alt="部屋の隅に置かれたモンステラやウンベラータの観葉植物。癒やしと自然を感じるインテリアのイメージ"
 								width="600"
 								height="750"
@@ -469,7 +474,7 @@
 						<div class="story-img-wrap fi">
 							<div class="story-avatar">
 								<img
-									src="https://placehold.jp/E6C7AC/ffffff/400x400.png?text=秋本るみ%0Aプロフィール写真"
+									src="https://placehold.jp/E6C7AC/ffffff/400x400.png"
 									alt="秋本るみのプロフィール写真。温かみのある自然光の中で撮影された笑顔の写真"
 									width="400"
 									height="400"
@@ -606,7 +611,7 @@
 						<!-- Group -->
 						<article class="menu-card menu-card--group fi fi-d1" role="listitem">
 							<div class="menu-card-head">
-								<div class="menu-tag">GROUP PLAN</div>p>
+								<div class="menu-tag">GROUP PLAN</div>
 								<h3 class="menu-name">グループプラン</h3>
 								<p class="menu-sub">合宿気分で仲間と楽しく</p>
 								<div>

@@ -10,9 +10,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 
-@include mobile {
-	font-size: 14px;
-}
+	@include mobile {
+		font-size: 14px;
+	}
 }
 
 /* =============================================
@@ -50,10 +50,10 @@ Utilities
 	margin-bottom: 14px;
 }
 .sec-ttl {
-    font-family: var(--f-serif);
-    font-size: clamp(23px, 5vw, 36px);
-    font-weight: 400;
-    margin-bottom: 60px;
+	font-family: var(--f-serif);
+	font-size: clamp(23px, 5vw, 36px);
+	font-weight: 400;
+	margin-bottom: 60px;
 }
 
 .sec-ttl em {
@@ -67,22 +67,24 @@ Utilities
 	margin-top: 18px;
 }
 
-
 /* =============================================
 Buttons
 ============================================= */
 .btn {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-font-size: 14px;
-font-weight: 500;
-border-radius: var(--r-full);
-cursor: pointer;
-transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
-padding: 12px 32px;
-white-space: nowrap;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: var(--r-full);
+	cursor: pointer;
+	transition:
+		transform var(--dur) var(--ease),
+		box-shadow var(--dur) var(--ease),
+		background var(--dur) var(--ease);
+	padding: 12px 32px;
+	white-space: nowrap;
 }
 .btn:hover {
 	transform: translateY(-2px);
@@ -140,7 +142,7 @@ Header
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 16px 24px;
+		padding: 20px 32px;
 		background: rgba(250, 249, 247, 0.88);
 		backdrop-filter: blur(14px);
 		-webkit-backdrop-filter: blur(14px);
@@ -157,11 +159,11 @@ Header
 		font-size: 24px;
 		font-weight: 400;
 		letter-spacing: 0.06em;
+		line-height: 1.6;
 
-	@include mobile {
-	font-size: 20px;
-	line-height: 1.6;
-	}
+		@include mobile {
+			font-size: 20px;
+		}
 
 		span {
 			color: var(--c-apricot-d);
@@ -172,9 +174,9 @@ Header
 		padding: 10px 20px;
 		font-size: 16px;
 
-	@include mobile {
-	padding: 8px 16px;
-	}
+		@include mobile {
+			padding: 8px 16px;
+		}
 	}
 }
 
@@ -189,9 +191,9 @@ Banner in header
 	position: relative;
 	overflow: hidden;
 
-@include mobile {
-	padding: 10px 8px;
-}
+	@include mobile {
+		padding: 10px 8px;
+	}
 
 	&::before {
 		content: '';
@@ -214,9 +216,9 @@ Banner in header
 		justify-content: center;
 		gap: 8px;
 
-	@include mobile {
-	gap: 0;
-	}
+		@include mobile {
+			gap: 0;
+		}
 	}
 
 	&__link {
@@ -233,7 +235,7 @@ Banner in header
 		font-weight: 700;
 		padding: 2px 10px;
 		border-radius: var(--r-full);
-	margin-right: 8px;
+		margin-right: 8px;
 	}
 }
 
@@ -250,7 +252,7 @@ HERO
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		
+
 		@include mobile {
 			flex-direction: column;
 		}
@@ -264,21 +266,21 @@ HERO
 		justify-content: center;
 
 		@include mobile {
-	padding: 64px 6px 48px;
-	margin: 0 auto;
-	text-align: center;
+			padding: 64px 6px 48px;
+			margin: 0 auto;
+			text-align: center;
 		}
 	}
 
 	&__sub-title {
-	font-family: var(--f-round); 
-	font-size: 16px;
-	letter-spacing: 0.2em;
-	color: var(--c-apricot-d);
-	margin-bottom: 16px;
-	display: flex;
-	align-items: center;
-	gap: 10px;
+		font-family: var(--f-round);
+		font-size: 16px;
+		letter-spacing: 0.2em;
+		color: var(--c-apricot-d);
+		margin-bottom: 16px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
 
 		@include mobile {
 			justify-content: center;
@@ -293,13 +295,11 @@ HERO
 	}
 
 	&__title {
-	font-family: var(--f-serif);
-	font-size: clamp(32px, 5.5vw, 56px);
-	font-weight: 300;
-	line-height: 1.5;
-	margin-bottom: 32px;
-
-
+		font-family: var(--f-serif);
+		font-size: clamp(32px, 5.5vw, 56px);
+		font-weight: 300;
+		line-height: 1.5;
+		margin-bottom: 32px;
 	}
 
 	&__lead {
@@ -309,14 +309,12 @@ HERO
 		margin-bottom: 40px;
 		line-height: 1.9;
 
-
 		mark {
 			background: none;
 			color: var(--c-apricot-d);
 			font-weight: 400;
 		}
 	}
-
 
 	&__actions {
 		display: flex;
@@ -337,8 +335,6 @@ HERO
 		}
 	}
 
-
-
 	&__overlay {
 		position: absolute;
 		inset: 0;
@@ -353,92 +349,108 @@ HERO
 /* =============================================
 EMPATHY
 ============================================= */
-.empathy-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 48px;
-	align-items: center;
-}
-@media (min-width: 768px) {
-	.empathy-grid {
-		grid-template-columns: 1fr 1fr;
+.empathy {
+	&__wrap {
+		max-width: var(--w);
+		margin: 0 auto;
+		padding: 0 20px;
 	}
-}
-
-.empathy-img-wrap {
-	border-radius: var(--r-lg);
-	overflow: hidden;
-	box-shadow: var(--sh-float);
-	aspect-ratio: 4/5;
-}
-.empathy-img-wrap img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.pain-list {
-	display: grid;
-	gap: 12px;
-	margin: 28px 0;
-}
-.pain-item {
-	display: flex;
-	align-items: flex-start;
-	gap: 12px;
-	background: var(--c-white);
-	border-radius: var(--r-md);
-	padding: 16px 18px;
-	font-size: 15px;
-	line-height: 1.7;
-	box-shadow: var(--sh-card);
-	border-left: 3px solid var(--c-milk-pink-d);
-	transition:
-		border-color var(--dur) var(--ease),
-		transform var(--dur) var(--ease);
-}
-.pain-item:hover {
-	border-left-color: var(--c-apricot-d);
-	transform: translateX(4px);
-}
-.pain-em {
-	font-size: 20px;
-	flex-shrink: 0;
-	margin-top: 1px;
-}
-.fi-icon {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: linear-gradient(135deg, var(--c-apricot) 0%, var(--c-apricot-d) 100%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	margin-top: 2px;
-}
-.fi-icon svg {
-	width: 10px;
-	height: 10px;
-}
-
-.pain-icon {
-	margin-top: 4px;
-}
-
-.empathy-msg {
-	margin-top: 8px;
-	background: linear-gradient(135deg, rgba(241, 227, 226, 0.5), rgba(230, 199, 172, 0.2));
-	border: 1px solid rgba(230, 199, 172, 0.4);
-	border-radius: var(--r-lg);
-	padding: 28px 24px;
-	font-family: var(--f-serif);
-	font-size: clamp(16px, 2.2vw, 19px);
-	line-height: 2;
-	text-align: center;
-}
-.empathy-msg strong {
-	color: var(--c-apricot-d);
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 48px;
+		align-items: center;
+		@media (min-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	&__image-wrapper {
+		border-radius: var(--r-lg);
+		overflow: hidden;
+		box-shadow: var(--sh-float);
+		aspect-ratio: 4/5;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__label {
+		display: inline-block;
+		font-family: var(--f-round);
+		font-size: 11px;
+		font-weight: 500;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		color: var(--c-apricot-d);
+		background: rgba(230, 199, 172, 0.18);
+		padding: 4px 14px;
+		border-radius: var(--r-full);
+		margin-bottom: 14px;
+	}
+	&__title {
+		font-family: var(--f-serif);
+		font-size: clamp(23px, 5vw, 36px);
+		font-weight: 400;
+		margin-bottom: 60px;
+		em {
+			font-style: normal;
+			color: var(--c-apricot-d);
+		}
+	}
+	&__pain-list {
+		display: grid;
+		gap: 12px;
+		margin: 28px 0;
+	}
+	&__pain-item {
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+		background: var(--c-white);
+		border-radius: var(--r-md);
+		padding: 16px 18px;
+		font-size: 15px;
+		line-height: 1.7;
+		box-shadow: var(--sh-card);
+		border-left: 3px solid var(--c-milk-pink-d);
+		transition:
+			border-color var(--dur) var(--ease),
+			transform var(--dur) var(--ease);
+		&:hover {
+			border-left-color: var(--c-apricot-d);
+			transform: translateX(4px);
+		}
+	}
+	&__pain-item-icon {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, var(--c-apricot) 0%, var(--c-apricot-d) 100%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		margin-top: 4px;
+		svg {
+			width: 10px;
+			height: 10px;
+		}
+	}
+	&__message {
+		margin-top: 8px;
+		background: linear-gradient(135deg, rgba(241, 227, 226, 0.5), rgba(230, 199, 172, 0.2));
+		border: 1px solid rgba(230, 199, 172, 0.4);
+		border-radius: var(--r-lg);
+		padding: 28px 24px;
+		font-family: var(--f-serif);
+		font-size: clamp(16px, 2.2vw, 19px);
+		line-height: 2;
+		text-align: center;
+		strong {
+			color: var(--c-apricot-d);
+		}
+	}
 }
 
 /* =============================================
