@@ -148,6 +148,10 @@ Header
 		-webkit-backdrop-filter: blur(14px);
 		border-bottom: 1px solid rgba(210, 196, 177, 0.3);
 		transition: box-shadow var(--dur) var(--ease);
+		
+		@include mobile {
+			padding: 16px;
+		}
 
 		&.is-scrolled {
 			box-shadow: 0 2px 18px rgba(61, 53, 48, 0.08);
@@ -179,7 +183,29 @@ Header
 		}
 	}
 }
+/* _line-button.scss */
 
+.line-button {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+
+  &__icon {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: #fffafc; 
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+}
 /* =============================================
 Banner in header
 ============================================= */
@@ -266,25 +292,20 @@ HERO
 		justify-content: center;
 
 		@include mobile {
-			padding: 64px 6px 48px;
+			padding: 64px 16px 48px;
 			margin: 0 auto;
-			text-align: center;
 		}
 	}
 
 	&__sub-title {
-		font-family: var(--f-round);
-		font-size: 16px;
-		letter-spacing: 0.2em;
+		letter-spacing: 0.1em;
 		color: var(--c-apricot-d);
 		margin-bottom: 16px;
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 8px;
 
-		@include mobile {
-			justify-content: center;
-		}
+
 
 		&::before {
 			content: '';
@@ -1143,45 +1164,6 @@ FOOTER
 	text-underline-offset: 2px;
 }
 
-/* =============================================
-Sticky LINE FAB
-============================================= */
-.fab-line {
-	position: fixed;
-	bottom: 24px;
-	right: 20px;
-	z-index: 150;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 5px;
-}
-.fab-btn {
-	width: 58px;
-	height: 58px;
-	border-radius: 50%;
-	background: var(--c-line);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 4px 22px rgba(6, 199, 85, 0.5);
-	transition:
-		transform var(--dur) var(--ease),
-		box-shadow var(--dur) var(--ease);
-}
-.fab-btn:hover {
-	transform: scale(1.08);
-	box-shadow: 0 8px 30px rgba(6, 199, 85, 0.6);
-}
-.fab-label {
-	font-size: 11px;
-	font-weight: 500;
-	color: var(--c-text-mid);
-	background: #fff;
-	padding: 2px 8px;
-	border-radius: var(--r-full);
-	box-shadow: var(--sh-card);
-}
 
 /* =============================================
 Fade-in
