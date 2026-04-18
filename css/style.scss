@@ -630,6 +630,10 @@ SOLUTION
 	overflow: hidden;
     box-shadow: var(--sh-float);
     margin-bottom: 48px;
+	@include mobile {
+		margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+	}
 }
 
 

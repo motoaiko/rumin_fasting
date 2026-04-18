@@ -968,6 +968,12 @@ SOLUTION
   box-shadow: var(--sh-float);
   margin-bottom: 48px;
 }
+@media (max-width: 768px) {
+  .solution-food-img {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+  }
+}
 
 .steps {
   display: grid;
