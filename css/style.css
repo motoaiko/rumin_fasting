@@ -535,7 +535,7 @@ Header
 }
 .line-button__icon {
   width: 40px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .line-button:hover {
   background-color: #fffafc;
@@ -713,12 +713,18 @@ EMPATHY
   overflow: hidden;
   box-shadow: var(--sh-float);
   width: 45%;
+  position: relative;
 }
 @media (max-width: 768px) {
   .empathy__image-wrapper {
-    width: 100%;
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
     aspect-ratio: 1/1;
   }
+}
+.empathy__image {
+  transform: translateY(-100px);
 }
 .empathy__label {
   display: inline-block;
@@ -795,6 +801,9 @@ EMPATHY
 }
 .empathy__message strong {
   color: var(--c-apricot-d);
+}
+.empathy__overlay {
+  background: linear-gradient(to right, var(--c-base) -5%, transparent 25%);
 }
 
 /* =============================================
@@ -955,18 +964,9 @@ SOLUTION
 
 /* Food image */
 .solution-food-img {
-  border-radius: var(--r-lg);
   overflow: hidden;
   box-shadow: var(--sh-float);
   margin-bottom: 48px;
-  aspect-ratio: 16/7;
-}
-
-.solution-food-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .steps {
@@ -1146,7 +1146,7 @@ STORY
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(230, 199, 172, 0.4);
-  border: 4px solid var(--c-white);
+  border: 2px solid var(--c-white);
 }
 
 .story-name-plate {
@@ -1536,6 +1536,14 @@ FOOTER
   width: 18px;
   height: 18px;
   flex-shrink: 0;
+}
+
+.shop-button__icon {
+  width: 30px;
+}
+
+.cf-button__icon {
+  width: 18px;
 }
 
 .footer-bottom {
