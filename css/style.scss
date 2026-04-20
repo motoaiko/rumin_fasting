@@ -21,10 +21,13 @@ Utilities
 .wrap {
 	max-width: var(--w);
 	margin: 0 auto;
-	padding: 0 24px;
+	padding: 120px 24px;
 }
 .sec {
-	padding: 80px 0;
+	padding-bottom: 240px;
+	@include mobile {
+		padding-bottom: 80px;
+	}
 }
 .sec--beige {
 	background: var(--c-base-warm);
@@ -129,6 +132,77 @@ Buttons
 .btn--dark:hover {
 	background: #5a4e49;
 }
+/* ---------------- */
+/* topへ戻るボタン */
+/* ---------------- */
+
+#pageTop {
+  opacity: 0;
+  pointer-events: none;
+
+
+}
+
+#pageTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#pageTop a {
+  position: absolute;
+  top: 47%;
+  left: 53%;
+  cursor: unset;
+}
+.page-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: fixed;
+  bottom: 5%;
+  right: 10%;
+  background-color: #E9967A;
+  z-index: 1000;
+
+}
+
+
+.arrow {
+  position: relative;
+  width: 12px;
+  height: 18px;
+  display: block;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+
+}
+
+.arrow::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
 
 /* =============================================
 Header
@@ -272,7 +346,6 @@ HERO
 	margin-top: 180px;
 }
 .hero {
-	min-height: 100svh;
 
 	&__layout {
 		display: flex;
@@ -321,6 +394,12 @@ HERO
 		font-weight: 300;
 		line-height: 1.5;
 		margin-bottom: 32px;
+		mark {
+			background: none;
+			color:#E9967A;
+			font-weight: 400;
+		}
+
 	}
 
 	&__lead {
@@ -330,11 +409,6 @@ HERO
 		margin-bottom: 40px;
 		line-height: 1.9;
 
-		mark {
-			background: none;
-			color: var(--c-apricot-d);
-			font-weight: 400;
-		}
 	}
 
 	&__actions {
@@ -349,7 +423,6 @@ HERO
 
 	&__image-wrapper {
 		position: relative;
-		min-height: 340px;
 
 		@include mobile {
 			width: 100%;
@@ -396,9 +469,7 @@ EMPATHY
 			margin-left: calc(50% - 50vw);			aspect-ratio: 1/1;
 		}
 	}
-	&__image {
-		transform: translateY(-100px);
-	}
+
 		
 	&__label {
 		display: inline-block;

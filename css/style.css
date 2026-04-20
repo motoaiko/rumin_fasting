@@ -309,8 +309,8 @@ table {
   --c-white: #FFFFFF;
   --c-line: #06C755;
   --c-line-d: #05A848;
-  --f-serif: 'Noto Serif JP', 'Yu Mincho', serif;
-  --f-round: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', sans-serif;
+  --f-serif: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  --f-round: 'Zen Kaku Gothic New', 'Hiragino Maru Gothic ProN', sans-serif;
   --r-xs: 6px;
   --r-sm: 12px;
   --r-md: 20px;
@@ -353,11 +353,16 @@ Utilities
 .wrap {
   max-width: var(--w);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 120px 24px;
 }
 
 .sec {
-  padding: 80px 0;
+  padding-bottom: 240px;
+}
+@media (max-width: 768px) {
+  .sec {
+    padding-bottom: 80px;
+  }
 }
 
 .sec--beige {
@@ -468,6 +473,72 @@ Buttons
 
 .btn--dark:hover {
   background: #5a4e49;
+}
+
+/* ---------------- */
+/* topへ戻るボタン */
+/* ---------------- */
+#pageTop {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#pageTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#pageTop a {
+  position: absolute;
+  top: 47%;
+  left: 53%;
+  cursor: unset;
+}
+
+.page-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: fixed;
+  bottom: 5%;
+  right: 10%;
+  background-color: #E9967A;
+  z-index: 1000;
+}
+
+.arrow {
+  position: relative;
+  width: 12px;
+  height: 18px;
+  display: block;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.arrow::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  right: 0;
+  transform: rotate(-45deg);
 }
 
 /* =============================================
@@ -601,9 +672,6 @@ HERO
   margin-top: 180px;
 }
 
-.hero {
-  min-height: 100svh;
-}
 .hero__layout {
   display: flex;
   justify-content: space-around;
@@ -648,17 +716,17 @@ HERO
   line-height: 1.5;
   margin-bottom: 32px;
 }
+.hero__title mark {
+  background: none;
+  color: #E9967A;
+  font-weight: 400;
+}
 .hero__lead {
   font-family: var(--f-serif);
   font-size: clamp(16px, 2.2vw, 24px);
   color: var(--c-text-mid);
   margin-bottom: 40px;
   line-height: 1.9;
-}
-.hero__lead mark {
-  background: none;
-  color: var(--c-apricot-d);
-  font-weight: 400;
 }
 .hero__actions {
   display: flex;
@@ -672,7 +740,6 @@ HERO
 }
 .hero__image-wrapper {
   position: relative;
-  min-height: 340px;
 }
 @media (max-width: 768px) {
   .hero__image-wrapper {
@@ -722,9 +789,6 @@ EMPATHY
     margin-left: calc(50% - 50vw);
     aspect-ratio: 1/1;
   }
-}
-.empathy__image {
-  transform: translateY(-100px);
 }
 .empathy__label {
   display: inline-block;

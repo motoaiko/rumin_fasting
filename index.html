@@ -38,15 +38,21 @@
 
 		<!-- Jquery(読み込みなし) -->
 		<!-- JS -->
-		<script src="js/index.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+		<script src="js/main.js" defer></script>
+
 
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap&family=Shippori+Mincho&family=Zen+Kaku+Gothic+New&display=swap"
 			rel="stylesheet"
 		/>
+
+
+
 
 		<!-- Swiper -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -85,15 +91,15 @@
 		<main id="main" class="main" role="main">
 
         <!-- FV-->
-			<section class="hero" aria-labelledby="hero">
+			<section class="hero sec" id="fv" aria-labelledby="hero">
 				<div class="hero__layout">
 					<div class="hero__content">
 						<p class="hero__sub-title">分子栄養学に基づく食欲コントロール</p>
 						<div class="hero__title" id="hero-h1">
-							最高に心地いい毎日は、<br>自分がつくる。
+							最高に<mark>心地いい毎日</mark>は、<br>自分がつくる。
 							</div>
 						<p class="hero__lead">
-							頑張るダイエットは、もう<mark>終わり</mark>。<br />
+							頑張るダイエットは、もう終わり。<br />
 							しっかり食べながら、食欲を整える。
 						</p>
 						<div class="hero__actions">
@@ -109,8 +115,7 @@
 							class="hero__image"
 							src="images/rumi2.png"
 							alt="笑顔の秋本るみ。明るい自然光の中で撮影された爽やかなメインビジュアル"
-							width="800"
-							height="900"
+		
 						/>
 						<div class="hero__overlay"></div>
 					</div>
@@ -354,12 +359,6 @@
 						</div>
 					</div>
 
-					<div class="tc" style="margin-top: 48px">
-						<a href="YOUR_LINE_ADD_FRIEND_LINK" class="line-button">
-							<img src="images/line_icon.png" alt="LINE icon" class="line-button__icon">
-							<span class="line-button__text">LINEで無料相談</span>
-						</a>
-							</div>
 				</div>
 			</section>
 
@@ -795,9 +794,14 @@
 			</div>
 		</footer>
 
+		<!-- topへ戻るボタン -->
+		<div>
+			<a id="pageTop" class="page-top" href="#">
+				<span class="arrow"></span>
+			</a>
+		</div>
 
-		<!-- Scripts -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script src="js/main.js"></script>
+
+
 	</body>
 </html>

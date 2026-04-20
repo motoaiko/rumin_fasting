@@ -43,3 +43,36 @@ new IntersectionObserver(entries => {
 fab.style.opacity        = entries[0].isIntersecting ? '0' : '1';
 fab.style.pointerEvents  = entries[0].isIntersecting ? 'none' : 'auto';
 }, { threshold: 0.1 }).observe(footer);
+
+
+/* ---------------- */
+/* topへ戻るボタン */
+/* ---------------- */
+
+document.addEventListener('DOMContentLoaded', function () {
+	const pageTopBtn = document.getElementById('pageTop');
+	const header = document.getElementById('fv');
+	const headerHeight = header.offsetHeight;
+
+	function togglePageTopBtn() {
+		if (window.scrollY > headerHeight) {
+			pageTopBtn.classList.add('show');
+		} else {
+			pageTopBtn.classList.remove('show');
+		}
+	}
+	window.addEventListener('scroll', togglePageTopBtn);
+
+    // ボタンクリックでスムーズにトップへスクロール
+    pageTop.addEventListener('click', function(e) {
+        e.preventDefault(); // デフォルトのアンカーリンク動作をキャンセル
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // スムーズスクロール
+        });
+    });
+
+
+
+});
+
