@@ -18,6 +18,22 @@ body {
 /* =============================================
 Utilities
 ============================================= */
+.mobile {
+	display: none;
+	
+	@include mobile {
+		display: block;
+	}
+}
+
+.pc {
+	display: block;
+	
+	@include mobile {
+		display: none;
+	}
+}
+
 .wrap {
 	max-width: var(--w);
 	margin: 0 auto;
@@ -234,18 +250,17 @@ Header
 
 	&__logo {
 		font-family: var(--f-serif);
-		font-size: 24px;
+		font-size: 32px;
 		font-weight: 400;
 		letter-spacing: 0.06em;
 		line-height: 1.6;
+		color: #E9967A;
 
 		@include mobile {
-			font-size: 20px;
+			font-size: 24px;
 		}
 
-		span {
-			color: var(--c-apricot-d);
-		}
+
 	}
 
 	&__cta {
@@ -360,9 +375,7 @@ HERO
 	&__content {
 		padding: 120px 40px 80px 60px;
 		max-width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+
 
 		@include mobile {
 			padding: 64px 16px 48px;
@@ -377,6 +390,10 @@ HERO
 		display: flex;
 		align-items: center;
 		gap: 8px;
+		@include mobile {
+			letter-spacing: 0;
+
+		}
 
 
 
@@ -466,7 +483,7 @@ EMPATHY
 		@include mobile {
 			width: 100vw;
 			margin-right: calc(50% - 50vw);
-			margin-left: calc(50% - 50vw);			aspect-ratio: 1/1;
+			margin-left: calc(50% - 50vw);	
 		}
 	}
 
@@ -550,6 +567,10 @@ EMPATHY
 
 	&__overlay {
 		background: linear-gradient(to right, var(--c-base) -5%, transparent 25%);
+
+		@include mobile {
+			background: linear-gradient(to top, var(--c-base) -10%, transparent 40%)
+		}
 	}
 }
 
@@ -885,16 +906,24 @@ STORY
 	font-weight: 400;
 }
 .story-role {
-	font-size: 12px;
+	font-size:14px;
 	color: var(--c-apricot-d);
 	letter-spacing: 0.1em;
 	margin-top: 4px;
+	@include mobile {
+		font-size: 12px;
+	}
 }
 
 .story-body {
-	font-size: 15px;
+	font-size: 16px;
 	color: var(--c-text-mid);
 	line-height: 2.1;
+
+	@include mobile {
+		font-size: 14px;
+		margin-bottom: 80px;
+	}
 }
 .story-body p {
 	margin-bottom: 18px;
